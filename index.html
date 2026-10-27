@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="de" data-theme="dark"><head><meta charset="utf-8">
+<title>SHOTIX – Sportfoto-Editor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="SHOTIX"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#000000"><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADJklEQVR4nO3cwW7TUBCG0QnifWDJ+69YwhOFhaUKUaZNG49t/fecFYv2Jsp8XNtpnLrf7wX/8+XsJwAAAAAAAAAAAAAAAAAAAAAAF3Y7+wnkOOxrcG63g6b29ZiH2eS9fNl8sw+tg3YO3zy2o5cXc3qDtHPQEgetQ09Is01v8scfmk+LwwXF9Tms0BIHLXHQEgctcdASBy1x0BIHLXHQEgctcdASBy1x0BIHLXHQEgctcdASBy1x0BIHLXHQEgctcdASBy1xPOXn929nP4VB+XHMzW9bObiP8Djm5vf3mql9JMcxN7/Xq0X2ERvH3Py6dfL6yIxjbn5vrxDWR+D3ILw7oR+/fg+t/OT6V5O2czwyv8/9/378t2L2j6g45uY3/fPXlBPH3Pymd5rLColjbn6fnnHAmUdIHEPnmCuXUTFx1EAfi5dRSXHUrn0oo8LiqJ36UMYmLY56ug9lvAh8h3Rz8JVkXhkVuXNsjpxWZBkVHEcdNbPUMio7jpqfXHAZFR9HTc4vu4xaIY6amWJ8GbVIHLX3LFcoo9aJo/ab6CJl1FJx1B5zXaeMWi2Oem66S5VRC8bxzDunAZ/f+ZC14pj+9HmYheKYvm8lzypxTN/xFmmJOKbvlU2VH8f0XfbBwuOYnl92H8lxHDO54D5i4zhyZql9ZMZx/OdAI/sIjOPJMvTxIi2OXfYMfWyi4tjxaKKPSopj9/MMfYTEMXQGungfIXF8boqP/NbKfYTEUR+f4uM/P1fexeXEUZPznv75a4qKoyaPFNM7zQUdcSP1/X7/91Fvs4/7xvH+ycnNfY/l245/DStv59jsfnX64Aoxe8YmM47a9X2tB9cJK6OC46id3hF/d+WJ9S8iOY56+m9p7678+t98zP2Vs5/Rbg57p+uU1zDzaiWPqxWuRRy0xEFLHLTEQUsctMRBSxy0xEFLHLTEQUsctMRBSxy0xEFLHLTEQUsctMRBSxy0xEFLHLTEQUsctL6e/QRyJN3JtzknjunX0R11u3BYoSUOWkccVl42+byj8ikOO2jaOWi5WtmNs2AAAAAAAAAAAAAAAAAAAAAAWMkfRnI2x5wXqWQAAAAASUVORK5CYII="><link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADJklEQVR4nO3cwW7TUBCG0QnifWDJ+69YwhOFhaUKUaZNG49t/fecFYv2Jsp8XNtpnLrf7wX/8+XsJwAAAAAAAAAAAAAAAAAAAAAAF3Y7+wnkOOxrcG63g6b29ZiH2eS9fNl8sw+tg3YO3zy2o5cXc3qDtHPQEgetQ09Is01v8scfmk+LwwXF9Tms0BIHLXHQEgctcdASBy1x0BIHLXHQEgctcdASBy1x0BIHLXHQEgctcdASBy1x0BIHLXHQEgctcdASBy1xPOXn929nP4VB+XHMzW9bObiP8Djm5vf3mql9JMcxN7/Xq0X2ERvH3Py6dfL6yIxjbn5vrxDWR+D3ILw7oR+/fg+t/OT6V5O2czwyv8/9/378t2L2j6g45uY3/fPXlBPH3Pymd5rLColjbn6fnnHAmUdIHEPnmCuXUTFx1EAfi5dRSXHUrn0oo8LiqJ36UMYmLY56ug9lvAh8h3Rz8JVkXhkVuXNsjpxWZBkVHEcdNbPUMio7jpqfXHAZFR9HTc4vu4xaIY6amWJ8GbVIHLX3LFcoo9aJo/ab6CJl1FJx1B5zXaeMWi2Oem66S5VRC8bxzDunAZ/f+ZC14pj+9HmYheKYvm8lzypxTN/xFmmJOKbvlU2VH8f0XfbBwuOYnl92H8lxHDO54D5i4zhyZql9ZMZx/OdAI/sIjOPJMvTxIi2OXfYMfWyi4tjxaKKPSopj9/MMfYTEMXQGungfIXF8boqP/NbKfYTEUR+f4uM/P1fexeXEUZPznv75a4qKoyaPFNM7zQUdcSP1/X7/91Fvs4/7xvH+ycnNfY/l245/DStv59jsfnX64Aoxe8YmM47a9X2tB9cJK6OC46id3hF/d+WJ9S8iOY56+m9p7678+t98zP2Vs5/Rbg57p+uU1zDzaiWPqxWuRRy0xEFLHLTEQUsctMRBSxy0xEFLHLTEQUsctMRBSxy0xEFLHLTEQUsctMRBSxy0xEFLHLTEQUsctL6e/QRyJN3JtzknjunX0R11u3BYoSUOWkccVl42+byj8ikOO2jaOWi5WtmNs2AAAAAAAAAAAAAAAAAAAAAAWMkfRnI2x5wXqWQAAAAASUVORK5CYII=">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Archivo:wdth,wght@75..125,400..800&display=swap">
+<style>
+:root{--bg:#f3f3f3;--panel:#fff;--ink:#0a0a0a;--muted:#5c5c5c;--line:#d9d9d9;--trk:#c4c4c4;--acc:#c8302f;--stage:#e4e4e4;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--panel:#111;--ink:#fff;--muted:#9b9b9b;--line:#2f2f2f;--trk:#4a4a4a;--acc:#d9403d;--stage:#000;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#000;--panel:#111;--ink:#fff;--muted:#9b9b9b;--line:#2f2f2f;--trk:#4a4a4a;--acc:#d9403d;--stage:#000;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 Archivo,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2{margin:0;font-family:Archivo,system-ui,sans-serif;font-stretch:75%;font-weight:700}
+.btns{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px}
+.btn{font:500 14px/1 Archivo,system-ui,sans-serif;color:var(--ink);background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:10px 2px;min-height:40px;cursor:pointer}
+.btn:hover{border-bottom-color:var(--ink)}
+.btn[aria-pressed=true]{border-bottom:2px solid var(--acc)}
+.pri{background:var(--acc);color:#fff;border:0;padding:12px 22px;border-radius:2px;font-weight:600}
+.pri:hover{filter:brightness(1.12)}
+.btn:focus-visible,input:focus-visible,.th:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.nav{max-width:1400px;margin:0 auto;padding:10px max(20px,env(safe-area-inset-right)) 0 max(20px,env(safe-area-inset-left));display:flex;justify-content:flex-end}
+.hero{min-height:min(74vh,640px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:12px 20px 48px;text-align:center}
+.logo{display:block;color:var(--ink);height:auto}
+.logo.big{width:min(90vw,800px)}
+.tag{font:500 16px/1.4 Archivo,system-ui,sans-serif;font-stretch:100%;color:var(--muted);letter-spacing:.02em}
+.hero .btns{justify-content:center}
+.app{max-width:1400px;margin:0 auto;padding:24px max(20px,env(safe-area-inset-right)) 12px max(20px,env(safe-area-inset-left));display:grid;gap:18px}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px}
+.et{font-size:32px;line-height:1}
+.stage{background:var(--stage);min-height:300px;display:grid;place-items:center;padding:12px}
+#view{max-width:100%;max-height:72vh;width:auto;height:auto;display:block}
+.empty{text-align:center;color:var(--muted);border:1px dashed var(--line);padding:44px 18px;width:100%}
+.empty p{margin:0 0 16px}
+.panel{columns:230px 4;column-gap:40px;border-top:1px solid var(--line);padding-top:14px}
+.panel h2{font-size:19px;padding-top:20px;margin:0 0 8px;break-after:avoid}
+.panel>canvas{margin-bottom:4px}
+#hist{width:100%;height:64px;display:block;border-bottom:1px solid var(--line)}
+.panel .btns{gap:6px}
+.panel .btn{border:1px solid var(--line);border-radius:2px;padding:8px 11px;min-height:0;font-size:13px;margin:0 6px 6px 0}
+.panel .btns .btn{margin:0}
+.panel .btn[aria-pressed=true]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.row{display:block;margin:0 0 12px;break-inside:avoid}
+.row span{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+.row output{color:var(--ink);font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;margin:0;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:2px;background:var(--trk)}
+input[type=range]::-moz-range-track{height:2px;background:var(--trk)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;margin-top:-9px;border-radius:50%;background:var(--ink);border:0}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--ink);border:0}
+.txt{width:100%;font:400 14px Archivo,system-ui,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:9px 11px;margin-bottom:8px}
+.note{font-size:12px;color:var(--muted);margin:6px 0 0;break-inside:avoid}
+.btn:disabled{opacity:.5;cursor:wait}
+.lib{grid-column:1/-1}
+.libhead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-bottom:8px}
+#cnt{color:var(--muted);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.strip{position:relative;display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
+.th{flex:none;position:relative;width:84px;height:64px;padding:0;border:0;background:var(--stage);cursor:pointer;opacity:.6}
+.th img{width:100%;height:100%;object-fit:cover;display:block}
+.th.on{opacity:1;outline:2px solid var(--ink);outline-offset:1px}
+.th.ed::after{content:"";position:absolute;right:4px;top:4px;width:8px;height:8px;background:var(--acc)}
+.th:focus-visible{opacity:1}
+.info{max-width:1400px;margin:0 auto;padding:48px max(20px,env(safe-area-inset-right)) 8px max(20px,env(safe-area-inset-left))}
+.info h2{font-size:28px;margin-bottom:14px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 40px}
+.feat div{border-top:1px solid var(--line);padding:14px 0 20px}
+.feat b{display:block;font-weight:600;margin-bottom:4px}
+.feat span{color:var(--muted)}
+footer.site{max-width:1400px;margin:0 auto;padding:28px max(20px,env(safe-area-inset-right)) 48px max(20px,env(safe-area-inset-left));color:var(--muted);font-size:12px}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.94);display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px;overflow:auto;z-index:9;color:#fff;text-align:center}
+.ov img{max-width:100%;height:auto}
+.ov .btn{color:#fff;text-decoration:none;display:inline-block}
+#outs{display:grid;gap:14px;width:100%;justify-items:center}
+@media(prefers-reduced-motion:no-preference){.big path{transform-box:fill-box;transform-origin:center;animation:snap .8s cubic-bezier(.2,.8,.2,1) both}.big text{animation:fade 1s ease both}}
+@keyframes snap{from{transform:scale(1.3);opacity:0}to{transform:none;opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+</style></head>
+<body>
+<header class="site">
+<nav class="nav"><div class="btns"><button class="btn" id="ne">Editor</button><button class="btn" id="nf">Funktionen</button><button class="btn" id="theme">Hellmodus</button></div></nav>
+<section class="hero"><svg class="logo big" viewBox="0 0 300 150" role="img" aria-label="SHOTIX"><path d="M107 5H80v28M194 5h27v28M107 145H80v-28M194 145h27v-28" fill="none" stroke="currentColor" stroke-width="3"/><text x="157" y="92" text-anchor="middle" font-family="Montserrat,system-ui,sans-serif" font-weight="600" font-size="46" letter-spacing="14" fill="currentColor">SHOTI<tspan fill="var(--acc)">X</tspan></text></svg><h1 class="tag">Sportfotos bearbeiten. Direkt im Browser.</h1>
+<div class="btns"><button class="btn pri" id="go">Editor starten</button><button class="btn" id="go2">Foto direkt öffnen</button></div></section>
+</header>
+<main class="app" id="editor">
+<div class="top"><h2 class="et">Editor</h2>
+<div class="btns"><button class="btn pri" id="open">Fotos öffnen</button><button class="btn" id="auto">Auto</button><button class="btn" id="save">Speichern</button></div></div>
+<input type="file" id="file" accept="image/*" multiple hidden><input type="file" id="dir" webkitdirectory hidden>
+<section class="lib" id="lib" hidden aria-label="Fotos"><div class="libhead"><span id="cnt"></span><div class="btns"><button class="btn" id="prev">Zurück</button><button class="btn" id="next">Weiter</button><button class="btn" id="more">Mehr Fotos</button><button class="btn" id="dirb">Ordner</button><button class="btn" id="app">Auf alle anwenden</button><button class="btn" id="all">Alle speichern</button><button class="btn" id="del">Entfernen</button></div></div><div class="strip" id="strip"></div></section>
+<section class="stage" aria-label="Bildvorschau">
+<canvas id="view" hidden></canvas>
+<div class="empty" id="empty"><p>Zieh Fotos oder einen ganzen Ordner hierher, oder füge sie mit Strg+V ein. Alles bleibt auf deinem Gerät.</p><div class="btns" style="justify-content:center"><button class="btn pri" id="open2">Fotos öffnen</button><button class="btn" id="dir2">Ordner öffnen</button></div></div>
+</section>
+<section class="panel" id="ctl" aria-label="Bearbeitung"><canvas id="hist" width="256" height="60" aria-label="Histogramm"></canvas></section>
+</main>
+<section class="info" id="feat"><h2>Was SHOTIX kann</h2><div class="feat">
+<div><b>Auto-Optimierung</b><span>Ein Tipp korrigiert Helligkeit, Kontrast, Lichter, Schatten und Farbstich.</span></div>
+<div><b>17 Looks</b><span>Von Flutlicht und Halle bis Retro und Schwarzweiß, gemacht für Sportfotos.</span></div>
+<div><b>Licht und Farbe</b><span>Belichtung, Kontrast, Lichter, Schatten, Temperatur, Sättigung und Dynamik.</span></div>
+<div><b>Zuschnitt und Horizont</b><span>Seitenverhältnisse, Drehen, Spiegeln und den Horizont gerade ziehen.</span></div>
+<div><b>Schärfe und Entrauschen</b><span>Für schnelle Bewegungen und hohe ISO in dunklen Hallen.</span></div>
+<div><b>KI-Qualität</b><span>Vergrößert Bilder auf das Doppelte und ergänzt Details mit Super-Resolution, direkt im Browser.</span></div>
+<div><b>Wasserzeichen und Export</b><span>Eigener Text, JPG oder PNG bis 4096 Pixel.</span></div></div>
+</section>
+<footer class="site">SHOTIX. Deine Fotos werden nur in deinem Browser verarbeitet und nie hochgeladen.</footer>
+<div class="ov" id="ov" hidden>
+<p>Tippe unter dem Foto auf „Speichern“. Falls nichts passiert: Foto gedrückt halten und „Bild sichern“ wählen.</p>
+<div id="outs"></div><button class="btn pri" id="close">Schließen</button></div>
+<script>
+const $=s=>document.querySelector(s);
+const groups=[["Licht",[["exp","Belichtung"],["con","Kontrast"],["hi","Lichter"],["sh","Schatten"]]],
+["Farbe",[["tmp","Temperatur"],["sat","Sättigung"],["vib","Dynamik"]]],
+["Details",[["shp","Schärfe",0],["nr","Entrauschen",0],["vig","Vignette",0]]],
+["Ausrichtung",[["ang","Horizont (±15°)"]]]];
+const ratios=[["Original",0],["1:1",1],["4:5",.8],["3:2",1.5],["16:9",16/9]];
+let img=null,P={},bw=false,rot=0,flip=false,ratio=0,showOrig=false,raf=0;
+const ctl=$("#ctl"),view=$("#view");
+
+const presets=[["Flutlicht",{exp:20,con:25,sh:35,tmp:-10,sat:10}],["Action",{con:35,sat:25,shp:40,vig:20}],["Halle",{exp:25,sh:40,tmp:15,nr:30,shp:20}],["Nachtspiel",{exp:35,sh:50,nr:45,tmp:-15,shp:15}],["Rasengrün",{con:20,sat:15,vib:30,tmp:5,shp:20}],["Goldene Stunde",{exp:10,sh:20,tmp:35,vib:20,vig:20}],["Blaue Stunde",{exp:-5,tmp:-40,con:25,sat:10,vig:35}],["Knackig",{con:30,shp:60,vib:30,hi:-15}],["Spielerporträt",{exp:8,con:10,hi:-20,sh:15,vib:10,shp:20}],["Cinematic",{con:30,sat:-10,tmp:-10,hi:-30,sh:20,vig:45}],["Matt",{con:-25,sh:40,hi:-20,sat:-15}],["Kühl",{tmp:-30,con:15,sat:-5}],["Retro",{sat:-30,tmp:25,vig:40,con:10}],["Vintage Film",{sat:-35,tmp:20,con:-10,vig:50,nr:20}],["Drama S/W",{con:40,vig:30,shp:30,bw:1}],["Hochkontrast S/W",{con:70,shp:40,bw:1}],["Soft S/W",{exp:10,con:-10,vig:25,bw:1}]];
+function auto(){if(!img)return;const c=geo(400),d=c.getContext("2d").getImageData(0,0,c.width,c.height).data,h=new Array(256).fill(0);let R=0,G=0,B=0,n=0;
+for(let i=0;i<d.length;i+=4){R+=d[i];G+=d[i+1];B+=d[i+2];n++;h[Math.round(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])]++}
+const pc=q=>{let s=0;for(let i=0;i<256;i++){s+=h[i];if(s>=n*q)return i/255}return 1},cl=v=>Math.max(-100,Math.min(100,Math.round(v))),
+m=(.2126*R+.7152*G+.0722*B)/n/255,lo=pc(.01),hi=pc(.99),p10=pc(.1),p90=pc(.9);
+apply({exp:cl(Math.log2(.42/Math.max(.05,m))*40),con:cl((.9-(hi-lo))*100),sh:cl(Math.max(0,.2-p10)*250),hi:cl(-Math.max(0,p90-.8)*300),tmp:cl(Math.max(-25,Math.min(25,(B-R)/n/255*40))),vib:15,shp:25})}
+$("#auto").onclick=()=>{if(img)auto();else pick()};
+const root=document.documentElement,tb2=$("#theme");
+try{const s=localStorage.getItem("shotix-theme");if(s)root.dataset.theme=s}catch(e){}
+const eff=()=>root.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+const lab=()=>{tb2.textContent=eff()==="dark"?"Hellmodus":"Dunkelmodus"};lab();
+tb2.onclick=()=>{const n=eff()==="dark"?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("shotix-theme",n)}catch(e){}lab();draw()};
+const sc=id=>{$(id).scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})};
+$("#go").onclick=()=>sc("#editor");$("#ne").onclick=()=>sc("#editor");$("#nf").onclick=()=>sc("#feat");
+$("#go2").onclick=()=>{sc("#editor");pick()};
+function apply(v){ctl.querySelectorAll(".row").forEach(l=>{const k=l.dataset.k;if(k==="ang")return;const i=l.querySelector("input");P[k]=i.value=v[k]||0;l.querySelector("output").textContent=P[k]});bw=!!v.bw;$("#bw").setAttribute("aria-pressed",bw);draw()}
+{const h=document.createElement("h2");h.textContent="Looks";const b=document.createElement("div");b.className="btns";
+presets.forEach(([n,v])=>{const x=document.createElement("button");x.className="btn";x.textContent=n;x.onclick=()=>apply(v);b.append(x)});ctl.append(h,b)}
+groups.forEach(([g,items])=>{
+  const h=document.createElement("h2");h.textContent=g;ctl.append(h);
+  items.forEach(([k,n,min])=>{
+    P[k]=0;
+    const l=document.createElement("label");l.className="row";
+    l.innerHTML=`<span>${n}<output>0</output></span><input type="range" min="${min??-100}" max="100" value="0">`;
+    const i=l.querySelector("input"),o=l.querySelector("output");
+    i.oninput=()=>{P[k]=+i.value;o.textContent=i.value;draw()};
+    i.ondblclick=()=>{i.value=0;i.oninput()};
+    l.dataset.k=k;ctl.append(l);
+  });
+  if(g==="Farbe"){const b=document.createElement("button");b.className="btn";b.id="bw";b.textContent="Schwarzweiß";b.setAttribute("aria-pressed","false");
+    b.onclick=()=>{bw=!bw;b.setAttribute("aria-pressed",bw);draw()};ctl.append(b)}
+});
+const hz=document.createElement("h2");hz.textContent="Zuschnitt";ctl.append(hz);
+const rb=document.createElement("div");rb.className="btns";
+ratios.forEach(([n,v],ix)=>{const b=document.createElement("button");b.className="btn";b.textContent=n;b.setAttribute("aria-pressed",ix===0);
+  b.onclick=()=>{ratio=v;rb.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));draw()};rb.append(b)});
+ctl.append(rb);
+const tb=document.createElement("div");tb.className="btns";tb.style.marginTop="8px";
+tb.innerHTML=`<button class="btn" id="rot">Drehen 90°</button><button class="btn" id="flp">Spiegeln</button>`;ctl.append(tb);
+let fmt="jpg";
+const hai=document.createElement("h2");hai.textContent="KI-Qualität";ctl.append(hai);
+const aib=document.createElement("button");aib.className="btn";aib.id="ai";aib.textContent="Mit KI verbessern (2×)";ctl.append(aib);
+const ain=document.createElement("p");ain.className="note";ain.id="aistat";ain.textContent="Rechnet Details neu und vergrößert den aktuellen Ausschnitt. Beim ersten Mal wird das KI-Modell geladen (Internet nötig).";ctl.append(ain);
+const loadScript=src=>new Promise((ok,no)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=()=>no(new Error(src));document.head.append(s)});
+let upscaler=null;
+aib.onclick=async()=>{const it=items[cur];if(!it){pick();return}
+ try{aib.disabled=true;ain.textContent="Lade KI-Modell …";
+  if(!window.tf)await loadScript("https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js");
+  if(!window.Upscaler)await loadScript("https://cdn.jsdelivr.net/npm/upscaler@latest/dist/browser/umd/upscaler.min.js");
+  upscaler=upscaler||new Upscaler();
+  const src=new Image();await new Promise((ok,no)=>{src.onload=ok;src.onerror=no;src.src=geo(2048).toDataURL("image/jpeg",.95)});
+  ain.textContent="0 %";
+  const out=await upscaler.upscale(src,{patchSize:64,padding:4,progress:p=>{ain.textContent=Math.round(p*100)+" %"}});
+  const im=new Image();await new Promise((ok,no)=>{im.onload=ok;im.onerror=no;im.src=out});
+  it.file=await (await fetch(out)).blob();it.img=im;img=im;rot=0;flip=false;ratio=0;P.ang=0;
+  syncUI();draw();ain.textContent=`Fertig: ${im.width} × ${im.height} px`
+ }catch(e){console.error(e);ain.textContent="Die KI konnte nicht laufen. Prüfe die Internetverbindung und versuche es noch einmal."}
+ aib.disabled=false};
+const hw=document.createElement("h2");hw.textContent="Export";ctl.append(hw);
+const wmi=document.createElement("input");wmi.className="txt";wmi.id="wm";wmi.placeholder="Wasserzeichen, z. B. SHOTIX";wmi.setAttribute("aria-label","Wasserzeichen");wmi.oninput=draw;ctl.append(wmi);
+const fb=document.createElement("button");fb.className="btn";fb.textContent="Format: JPG";fb.onclick=()=>{fmt=fmt==="jpg"?"png":"jpg";fb.textContent="Format: "+fmt.toUpperCase()};ctl.append(fb);
+function wm(c){const t=$("#wm").value.trim();if(!t)return;const x=c.getContext("2d"),s=Math.max(12,c.width/32);x.font=`600 ${s}px Montserrat,sans-serif`;x.textAlign="right";x.textBaseline="bottom";x.shadowColor="rgba(0,0,0,.6)";x.shadowBlur=s/4;x.fillStyle="rgba(255,255,255,.88)";x.fillText(t,c.width-s*.6,c.height-s*.5)}
+function hist(c){const d=c.getContext("2d").getImageData(0,0,c.width,c.height).data,h=new Array(256).fill(0);for(let i=0;i<d.length;i+=16)h[Math.round(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])]++;const m=Math.max(...h.slice(2,254))||1,x=$("#hist").getContext("2d");x.clearRect(0,0,256,60);x.fillStyle=getComputedStyle(document.documentElement).getPropertyValue("--muted");for(let i=0;i<256;i++){const v=Math.min(1,h[i]/m)*60;x.fillRect(i,60-v,1,v)}}
+const h3=document.createElement("h2");h3.textContent="Ansicht";ctl.append(h3);
+const vb=document.createElement("div");vb.className="btns";
+vb.innerHTML=`<button class="btn" id="cmp">Vorher (halten)</button><button class="btn" id="rst">Zurücksetzen</button>`;ctl.append(vb);
+$("#rot").onclick=()=>{rot=(rot+90)%360;draw()};
+$("#flp").onclick=()=>{flip=!flip;draw()};
+const cmp=$("#cmp");
+["pointerdown"].forEach(e=>cmp.addEventListener(e,()=>{showOrig=true;draw()}));
+["pointerup","pointerleave","pointercancel"].forEach(e=>cmp.addEventListener(e,()=>{if(showOrig){showOrig=false;draw()}}));
+$("#rst").onclick=()=>{
+  ctl.querySelectorAll(".row").forEach(l=>{const i=l.querySelector("input");i.value=0;l.querySelector("output").textContent="0";P[l.dataset.k]=0});
+  bw=false;$("#bw").setAttribute("aria-pressed","false");rot=0;flip=false;ratio=0;
+  rb.querySelectorAll("button").forEach((x,ix)=>x.setAttribute("aria-pressed",ix===0));draw();
+};
+
+function pick(){$("#file").click()}
+$("#open").onclick=pick;$("#open2").onclick=pick;
+$("#file").onchange=e=>{
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{const im=new Image();
+    im.onload=()=>{img=im;$("#empty").hidden=true;view.hidden=false;draw()};
+    im.onerror=()=>{$("#empty").querySelector("p").textContent="Dieses Format kann der Browser nicht lesen. Nutze JPG, PNG oder WebP."};
+    im.src=r.result};
+  r.readAsDataURL(f);
+};
+
+function geo(max){
+  const w0=img.width,h0=img.height,q=rot%180;
+  const sw=q?h0:w0,sh=q?w0:h0;
+  let a=ratio;if(a&&sh>sw)a=1/a;
+  let cw=sw,ch=sh;
+  if(a){if(sw/sh>a)cw=sh*a;else ch=sw/a}
+  const k=Math.min(1,max/Math.max(cw,ch));
+  const c=document.createElement("canvas");
+  c.width=Math.max(1,Math.round(cw*k));c.height=Math.max(1,Math.round(ch*k));
+  const x=c.getContext("2d");x.imageSmoothingQuality="high";
+  const an=P.ang*.15*Math.PI/180,zm=Math.cos(Math.abs(an))+Math.sin(Math.abs(an))*Math.max(cw/ch,ch/cw);
+  x.translate(c.width/2,c.height/2);x.scale(flip?-k*zm:k*zm,k*zm);x.rotate(rot*Math.PI/180+an);
+  x.drawImage(img,-w0/2,-h0/2);
+  return c;
+}
+
+function proc(c){
+  const x=c.getContext("2d"),W=c.width,H=c.height,d=x.getImageData(0,0,W,H),p=d.data;
+  const ex=2**(P.exp/50),f=1+P.con/(P.con>0?100:200),hi=P.hi/100,sh=P.sh/100,
+        t=P.tmp/100,s=1+P.sat/100,vb=P.vib/100,vg=P.vig/100;
+  for(let y=0;y<H;y++){
+    const dy=(y/H-.5)*2;
+    for(let xx=0;xx<W;xx++){
+      const i=(y*W+xx)*4,dx=(xx/W-.5)*2;
+      let r=p[i]/255*ex*(1+.2*t),g=p[i+1]/255*ex,b=p[i+2]/255*ex*(1-.2*t);
+      let l=.2126*r+.7152*g+.0722*b;l=l<0?0:l>1?1:l;
+      const add=sh*.35*(1-l)*(1-l)+hi*.35*l*l;
+      r+=add;g+=add;b+=add;
+      r=(r-.5)*f+.5;g=(g-.5)*f+.5;b=(b-.5)*f+.5;
+      const l2=.2126*r+.7152*g+.0722*b;
+      const sv=s+vb*(1-Math.min(1,Math.max(0,Math.max(r,g,b)-Math.min(r,g,b))));
+      if(bw){r=g=b=l2}else{r=l2+(r-l2)*sv;g=l2+(g-l2)*sv;b=l2+(b-l2)*sv}
+      if(vg){const m=1-vg*(dx*dx+dy*dy)/2*1.1;r*=m;g*=m;b*=m}
+      p[i]=r*255;p[i+1]=g*255;p[i+2]=b*255;
+    }
+  }
+  if(P.shp>0||P.nr>0){
+    const src=new Uint8ClampedArray(p),a=P.shp/100*1.5-P.nr/100;
+    for(let y=1;y<H-1;y++)for(let xx=1;xx<W-1;xx++){
+      const i=(y*W+xx)*4;
+      for(let ch=0;ch<3;ch++){
+        const j=i+ch;
+        const m=(src[j-4-W*4]+src[j-W*4]+src[j+4-W*4]+src[j-4]+src[j]+src[j+4]+src[j-4+W*4]+src[j+W*4]+src[j+4+W*4])/9;
+        p[j]=src[j]+a*(src[j]-m);
+      }
+    }
+  }
+  x.putImageData(d,0,0);
+}
+
+function draw(){
+  if(!img)return;
+  cancelAnimationFrame(raf);
+  raf=requestAnimationFrame(()=>{
+    const c=geo(1400);if(!showOrig){proc(c);hist(c);wm(c)}else hist(c);strip.children[cur]?.classList.toggle("ed",isEd(items[cur]));
+    view.width=c.width;view.height=c.height;view.getContext("2d").drawImage(c,0,0);
+  });
+}
+
+$("#save").onclick=()=>{
+  if(!img){pick();return}
+  const c=geo(4096);proc(c);wm(c);
+  $("#out").src=(fmt==="png"?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.92));
+  $("#ov").hidden=false;
+};
+$("#close").onclick=()=>{$("#ov").hidden=true};
+const items=[],strip=$("#strip"),outs=$("#outs");let cur=-1;
+const fresh=()=>{const p={};groups.forEach(([g,it])=>it.forEach(([k])=>p[k]=0));return{P:p,bw:false,rot:0,flip:false,ratio:0}};
+const snap=()=>({P:{...P},bw,rot,flip,ratio});
+function use(s,im){P=s.P;bw=s.bw;rot=s.rot;flip=s.flip;ratio=s.ratio;img=im}
+const isEd=it=>{if(!it)return false;const s=it===items[cur]?snap():it.st;return Object.values(s.P).some(v=>v)||s.bw||s.rot||s.flip||s.ratio};
+const loadImg=f=>new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>ok(im);im.onerror=no;im.src=r.result};r.onerror=no;r.readAsDataURL(f)});
+function syncUI(){ctl.querySelectorAll(".row").forEach(l=>{const i=l.querySelector("input");i.value=P[l.dataset.k]||0;l.querySelector("output").textContent=i.value});$("#bw").setAttribute("aria-pressed",bw);rb.querySelectorAll("button").forEach((x,ix)=>x.setAttribute("aria-pressed",ratios[ix][1]===ratio))}
+function renderStrip(){strip.innerHTML="";items.forEach((it,i)=>{const b=document.createElement("button");b.className="th"+(i===cur?" on":"")+(isEd(it)?" ed":"");b.setAttribute("aria-label",it.name);b.title=it.name;const im=new Image();im.src=it.th;im.alt="";b.append(im);b.onclick=()=>select(i);strip.append(b)});
+$("#lib").hidden=!items.length;if(items[cur])$("#cnt").textContent=`Foto ${cur+1} von ${items.length}: ${items[cur].name}`;
+const on=strip.children[cur];if(on)strip.scrollLeft=on.offsetLeft-strip.clientWidth/2+on.offsetWidth/2}
+async function select(i){if(items[cur])items[cur].st=snap();cur=i;const it=items[i];if(!it.img)it.img=await loadImg(it.file);items.forEach(x=>{if(x!==it)x.img=null});use(it.st,it.img);syncUI();renderStrip();$("#empty").hidden=true;view.hidden=false;draw()}
+async function addFiles(list){const fs=[...list].filter(f=>f&&f.type.startsWith("image/")).sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));
+if(!fs.length){$("#empty").querySelector("p").textContent="Keine Bilddateien gefunden. Nutze JPG, PNG oder WebP.";return}
+$("#lib").hidden=false;let n=0;
+for(const f of fs){$("#cnt").textContent=`Lade ${++n} von ${fs.length}…`;
+try{const im=await loadImg(f),k=96/Math.max(im.width,im.height),c=document.createElement("canvas");c.width=Math.max(1,Math.round(im.width*k));c.height=Math.max(1,Math.round(im.height*k));const x=c.getContext("2d");x.imageSmoothingQuality="high";x.drawImage(im,0,0,c.width,c.height);
+items.push({name:f.name,file:f,th:c.toDataURL("image/jpeg",.7),st:fresh(),img:null});
+if(cur<0)await select(0);else renderStrip()}catch(e){}}
+renderStrip()}
+const nav=d=>{if(items.length>1)select((cur+d+items.length)%items.length)};
+$("#file").onchange=e=>{addFiles(e.target.files);e.target.value=""};
+$("#dir").onchange=e=>{addFiles(e.target.files);e.target.value=""};
+$("#dir2").onclick=()=>$("#dir").click();$("#dirb").onclick=()=>$("#dir").click();$("#more").onclick=pick;
+$("#prev").onclick=()=>nav(-1);$("#next").onclick=()=>nav(1);
+$("#app").onclick=()=>{if(cur<0)return;items.forEach((x,i)=>{if(i!==cur){x.st.P={...P,ang:x.st.P.ang||0};x.st.bw=bw;x.st.ratio=ratio}});renderStrip();const b=$("#app"),t=b.textContent;b.textContent="Angewendet";setTimeout(()=>b.textContent=t,1500)};
+$("#del").onclick=()=>{if(cur<0)return;const old=cur;items.splice(old,1);cur=-1;if(items.length)select(Math.min(old,items.length-1));else{img=null;view.hidden=true;$("#empty").hidden=false;renderStrip()}};
+async function walk(en,out){if(en.isFile){out.push(await new Promise(r=>en.file(r,()=>r(null))))}else if(en.isDirectory){const rd=en.createReader();let b;do{b=await new Promise(r=>rd.readEntries(r,()=>r([])));for(const e of b)await walk(e,out)}while(b.length)}}
+document.addEventListener("dragover",e=>e.preventDefault());
+document.addEventListener("drop",async e=>{e.preventDefault();const ens=[...(e.dataTransfer.items||[])].map(i=>i.webkitGetAsEntry&&i.webkitGetAsEntry()).filter(Boolean),out=[];
+if(ens.length){for(const en of ens)await walk(en,out)}else out.push(...e.dataTransfer.files);addFiles(out.filter(Boolean))});
+document.addEventListener("paste",e=>{const fs=[...(e.clipboardData?e.clipboardData.files:[])];if(fs.length)addFiles(fs)});
+document.addEventListener("keydown",e=>{if(e.target.tagName==="INPUT")return;if(e.key==="ArrowRight")nav(1);if(e.key==="ArrowLeft")nav(-1)});
+const mime=()=>fmt==="png"?"image/png":"image/jpeg";
+function showOut(urls,names){outs.innerHTML="";const ext=fmt==="png"?"png":"jpg";urls.forEach((u,i)=>{const f=document.createElement("figure");f.style.cssText="margin:0;display:grid;gap:8px;justify-items:center;width:100%";const im=new Image();im.src=u;im.alt="Bearbeitetes Foto";const a=document.createElement("a");a.className="btn";a.href=u;a.textContent="Speichern";a.download=((names&&names[i])||"foto").replace(/\.[^.]+$/,"")+"-shotix."+ext;f.append(im,a);outs.append(f)});$("#ov").hidden=false}
+async function renderItem(it,max){if(it===items[cur]){const c=geo(max);proc(c);wm(c);return c}
+const im=await loadImg(it.file),k=snap(),ki=img;use(it.st,im);const c=geo(max);proc(c);wm(c);use(k,ki);return c}
+$("#save").onclick=async()=>{if(cur<0){pick();return}showOut([(await renderItem(items[cur],4096)).toDataURL(mime(),.92)],[items[cur].name])};
+$("#all").onclick=async()=>{if(!items.length)return;const b=$("#all"),t=b.textContent,u=[];for(let i=0;i<items.length;i++){b.textContent=`Rendere ${i+1} von ${items.length}…`;const c=await renderItem(items[i],fmt==="png"?2000:3000);u.push(c.toDataURL(mime(),.9));await new Promise(r=>setTimeout(r))}b.textContent=t;showOut(u,items.map(x=>x.name))};
+</script></body></html>
